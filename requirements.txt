@@ -1,0 +1,8 @@
+pytest
+pytest-asyncio
+pytest-xdist
+pytest_ordering
+pytest-rerunfailures
+pytest-timeout
+pytest-json-report
+twilio

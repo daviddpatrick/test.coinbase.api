@@ -6,3 +6,4 @@ pytest-rerunfailures
 pytest-timeout
 pytest-json-report
 twilio
+allure-pytest

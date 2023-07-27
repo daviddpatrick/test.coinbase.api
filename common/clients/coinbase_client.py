@@ -35,5 +35,5 @@ class CoinbaseApiClient(HttpClientBase):
     def get_btc_usd_price(self):
         get_url = 'prices/BTC-USD/buy'
         response = self._get(get_url)
-        self.logger.info(f'The price of Bitcoin is: ${json.loads(response.text)["data"]["amount"]}')
+        self.logger.info(f'The price of Bitcoin is: ${json.loads(response.text)["data"]["amount"]}, you\'re a winner!')
         return json.loads(response.text)["data"]["amount"]

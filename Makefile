@@ -1,5 +1,5 @@
 ENV ?= venv
-VENV ?= us
+VENV ?= venv
 PIP = $(VENV)/bin/pip3
 PYTHON = $(VENV)/bin/python3
 TESTENV ?= us
@@ -16,4 +16,6 @@ build: $(VENV)
 
 test: $(VENV)
 	clear
-	$(PYTHON) -m pytest tests/test_coinbase.py --test_env=$(TESTENV)
+	-$(PYTHON) -m pytest tests/test_coinbase.py --test_env=$(TESTENV) --alluredir=allure-results -W ignore::Warning;
+	sleep 5;
+	allure serve allure-results;
